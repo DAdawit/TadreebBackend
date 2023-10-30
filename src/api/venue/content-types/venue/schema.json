@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "venues",
+  "info": {
+    "singularName": "venue",
+    "pluralName": "venues",
+    "displayName": "Venue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "mappedBy": "venues"
+    },
+    "venues": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::venue.venue",
+      "inversedBy": "venue"
+    },
+    "venue": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::venue.venue",
+      "inversedBy": "venues"
+    }
+  }
+}

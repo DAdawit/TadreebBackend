@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_schedule_schedules",
+  "info": {
+    "displayName": "Schedule",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "fee": {
+      "type": "biginteger"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

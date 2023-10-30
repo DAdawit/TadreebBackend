@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_categories",
+  "info": {
+    "singularName": "training-category",
+    "pluralName": "training-categories",
+    "displayName": "TrainingCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "trainings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::training.training",
+      "inversedBy": "training_categories"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "training_category"
+    }
+  }
+}
